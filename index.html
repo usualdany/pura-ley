@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PURA LEY - Plataforma Legislativa Transparente</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- NAVEGACIÓN -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">📋</span>
+                <span class="logo-text">PURA LEY</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#estadisticas">Estadísticas</a></li>
+                <li><a href="#como-funciona">Cómo funciona</a></li>
+                <li><a href="#glosario">Glosario</a></li>
+                <li><a href="#sobre">Sobre nosotros</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- SECCIÓN PRINCIPAL -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <h1>Buscador de Proyectos de Ley</h1>
+            <p class="subtitle">Acceso transparente a la información legislativa de Costa Rica</p>
+            <p class="contador" id="contador">Cargando proyectos...</p>
+        </div>
+    </section>
+
+    <!-- BUSCADOR Y FILTROS -->
+    <section id="proyectos" class="search-section">
+        <div class="container">
+            <div class="search-bar">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="Buscar por título, expediente o contenido..."
+                    class="search-input"
+                >
+            </div>
+
+            <div class="filters">
+                <select id="temaFilter" class="filter-select">
+                    <option value="">Todos los temas</option>
+                    <option value="Economía">Economía</option>
+                    <option value="Salud">Salud</option>
+                    <option value="Educación">Educación</option>
+                    <option value="Transporte">Transporte</option>
+                    <option value="Ambiental">Ambiental</option>
+                    <option value="General">General</option>
+                </select>
+
+                <select id="estadoFilter" class="filter-select">
+                    <option value="">Todos los estados</option>
+                    <option value="En Comisión">En Comisión</option>
+                    <option value="Impacto Medio">Impacto Medio</option>
+                    <option value="Primer Debate">Primer Debate</option>
+                    <option value="Segundo Debate">Segundo Debate</option>
+                    <option value="Aprobado">Aprobado</option>
+                </select>
+
+                <select id="impactoFilter" class="filter-select">
+                    <option value="">Todo impacto</option>
+                    <option value="Bajo">Bajo</option>
+                    <option value="Medio">Medio</option>
+                    <option value="Alto">Alto</option>
+                </select>
+
+                <button class="btn-filtros" id="btnFiltros">⚙️ Más filtros</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section class="proyectos-section">
+        <div class="container">
+            <div id="proyectosList" class="proyectos-grid">
+                <!-- Los proyectos se cargan aquí con JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN ESTADÍSTICAS -->
+    <section id="estadisticas" class="stats-section">
+        <div class="container">
+            <h2>Estadísticas Generales</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3 id="totalProyectos">0</h3>
+                    <p>Proyectos totales</p>
+                </div>
+                <div class="stat-card">
+                    <h3 id="enComision">0</h3>
+                    <p>En comisión</p>
+                </div>
+                <div class="stat-card">
+                    <h3 id="aprobados">0</h3>
+                    <p>Aprobados</p>
+                </div>
+                <div class="stat-card">
+                    <h3 id="porTema">0</h3>
+                    <p>Temas diferentes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN CÓMO FUNCIONA -->
+    <section id="como-funciona" class="info-section">
+        <div class="container">
+            <h2>¿Cómo funciona PURA LEY?</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>🔍 Busca</h3>
+                    <p>Encuentra proyectos de ley por título, número de expediente o contenido.</p>
+                </div>
+                <div class="info-card">
+                    <h3>📊 Analiza</h3>
+                    <p>Visualiza el estado, tema e impacto de cada proyecto legislativo.</p>
+                </div>
+                <div class="info-card">
+                    <h3>📚 Aprende</h3>
+                    <p>Consulta nuestro glosario para entender términos legislativos.</p>
+                </div>
+                <div class="info-card">
+                    <h3>🌍 Transparencia</h3>
+                    <p>Acceso público y neutral a la información de la Asamblea Legislativa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN GLOSARIO -->
+    <section id="glosario" class="glossary-section">
+        <div class="container">
+            <h2>Glosario Legislativo</h2>
+            <div class="glossary-grid">
+                <div class="glossary-item">
+                    <h4>Expediente</h4>
+                    <p>Número único que identifica cada proyecto de ley en la Asamblea.</p>
+                </div>
+                <div class="glossary-item">
+                    <h4>En Comisión</h4>
+                    <p>Proyecto en revisión por las comisiones legislativas especializadas.</p>
+                </div>
+                <div class="glossary-item">
+                    <h4>Primer Debate</h4>
+                    <p>Primera lectura y discusión del proyecto en plenario.</p>
+                </div>
+                <div class="glossary-item">
+                    <h4>Segundo Debate</h4>
+                    <p>Segunda lectura para votación final del proyecto.</p>
+                </div>
+                <div class="glossary-item">
+                    <h4>Impacto</h4>
+                    <p>Nivel de afectación que tiene el proyecto en la población.</p>
+                </div>
+                <div class="glossary-item">
+                    <h4>Aprobado</h4>
+                    <p>Proyecto que ha pasado todos los debates y es ley.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN SOBRE NOSOTROS -->
+    <section id="sobre" class="about-section">
+        <div class="container">
+            <h2>Sobre PURA LEY</h2>
+            <div class="about-content">
+                <h3>Transparencia legislativa para todos</h3>
+                <p>PURA LEY es una plataforma <strong>neutral, descentralizada y transparente</strong> que facilita el acceso público a la información sobre proyectos legislativos de Costa Rica.</p>
+                
+                <h4>Nuestros principios:</h4>
+                <ul class="principles-list">
+                    <li>✓ <strong>Neutralidad:</strong> Sin afiliación política</li>
+                    <li>✓ <strong>Transparencia:</strong> Información clara y accesible</li>
+                    <li>✓ <strong>Divulgación:</strong> Solo información pública y verificada</li>
+                    <li>✓ <strong>Seguridad:</strong> Sin recopilación de datos personales</li>
+                    <li>✓ <strong>Accesibilidad:</strong> Para todos los ciudadanos</li>
+                </ul>
+
+                <p style="margin-top: 20px; font-style: italic;">PURA LEY no permite participación política directa ni votación, garantizando así la neutralidad y seguridad de la información.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 PURA LEY - Plataforma Legislativa Transparente de Costa Rica</p>
+            <p>Desarrollado para una democracia más transparente 📋</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
